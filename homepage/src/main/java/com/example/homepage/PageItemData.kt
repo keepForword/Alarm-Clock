@@ -5,4 +5,4 @@ package com.example.homepage
  * @author: shelvehuang
  * @date: 2022/9/5
  */
-data class PageItemData(val time: String, val clockItemData: ClockItemData)
+data class PageItemData(val time: String, val clockItemDataList: MutableList<ClockItemData>)

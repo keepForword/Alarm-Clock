@@ -2,6 +2,7 @@ package com.example.homepage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_home_page.homeViewPager
 import kotlinx.android.synthetic.main.view_page.eventList
 
 class HomePageActivity : AppCompatActivity() {
@@ -14,8 +15,10 @@ class HomePageActivity : AppCompatActivity() {
         val clockItemData2 = ClockItemData("07:00", "上午"
             , "工作日", "宝贝，起床啦！")
         val list: MutableList<ClockItemData> = mutableListOf(clockItemData1, clockItemData2)
-        val clockListAdapter = ClockListAdapter(list)
-        eventList.adapter = clockListAdapter
+
+        val listForHomePage: MutableList<PageItemData> = mutableListOf(PageItemData("07:00", list))
+
+        homeViewPager.adapter = HomePageAdapter(listForHomePage, applicationContext)
 
 
     }
