@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="homepage/src/main/res/layout/activity_home_page.xml" value="0.1" />
+        <entry key="homepage/src/main/res/layout/caution_view_item.xml" value="0.3796875" />
         <entry key="homepage/src/main/res/layout/recycler_view_item.xml" value="0.1" />
         <entry key="homepage/src/main/res/layout/view_page.xml" value="0.375" />
       </map>

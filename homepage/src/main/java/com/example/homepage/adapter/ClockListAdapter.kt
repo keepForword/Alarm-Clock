@@ -1,10 +1,11 @@
-package com.example.homepage
+package com.example.homepage.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homepage.dataClass.ClockItemData
+import com.example.homepage.R
 import kotlinx.android.synthetic.main.recycler_view_item.view.amOrPm
 import kotlinx.android.synthetic.main.recycler_view_item.view.appointedTime
 import kotlinx.android.synthetic.main.recycler_view_item.view.isWorkDay
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.recycler_view_item.view.workDay
 class ClockListAdapter(private val list: MutableList<ClockItemData>) : RecyclerView.Adapter<ClockListAdapter.ViewHolder>() {
 
     fun addItem(clockItemData: ClockItemData) {
-        list.add(clockItemData)
+        list.add(0, clockItemData)
     }
 
     fun removeItem(index: Int) {

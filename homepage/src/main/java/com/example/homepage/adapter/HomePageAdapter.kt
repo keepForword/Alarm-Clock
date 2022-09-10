@@ -1,12 +1,13 @@
-package com.example.homepage
+package com.example.homepage.adapter
 
-import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homepage.R
+import com.example.homepage.dataClass.PageItemData
 import kotlinx.android.synthetic.main.view_page.view.clock
 import kotlinx.android.synthetic.main.view_page.view.eventList
 
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.view_page.view.eventList
  * @author: shelvehuang
  * @date: 2022/9/5
  */
-class HomePageAdapter(private val list: List<PageItemData>, val context: Context) : RecyclerView.Adapter<HomePageAdapter.ViewHolder>() {
+class HomePageAdapter(private val list: List<PageItemData>, private val context: Context) : RecyclerView.Adapter<HomePageAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View, private val context: Context) : RecyclerView.ViewHolder(itemView) {
         private val nowTime = itemView.clock

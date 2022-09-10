@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+    <GridLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                tools:text = "事件提醒"
+                android:textSize="18sp" />
+        <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "09:00"
+                android:textSize="13sp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "提醒信息："
+                android:textSize="11sp" />
+
+        <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "1遍"
+                android:textSize="12sp" />
+        <TextView
+                android:id="@+id/voiceBroadcastContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text = "宝贝，起床拉！"
+                android:maxLines="1"
+                android:textSize="11sp" />
+    </GridLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp" />
+</LinearLayout>

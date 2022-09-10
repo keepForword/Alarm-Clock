@@ -1,4 +1,4 @@
-package com.example.homepage
+package com.example.homepage.dataClass
 
 /**
  * @Description: 设置闹钟对应的数据项
@@ -6,4 +6,4 @@ package com.example.homepage
  * @date: 2022/9/4
  */
 data class ClockItemData(val time: String, val amOrPm: String, val work: String
-                         , val voiceBroadcastContent : String )
+                         , val voiceBroadcastContent : String)
