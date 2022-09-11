@@ -1,5 +1,8 @@
 package com.example.homepage.dataClass
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 /**
  * @Description: 提醒页的数据类
  * @author: shelvehuang
@@ -8,4 +11,5 @@ package com.example.homepage.dataClass
  * @param: number 提醒次数
  * @param: voiceBroadcastContent 提醒语音
  */
-data class CautionItemData(val time: String, val number: Int, val voiceBroadcastContent : String)
+@Parcelize
+data class CautionItemData(val time: String, val number: Int, val voiceBroadcastContent : String) : Parcelable

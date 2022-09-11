@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homepage.R
 import com.example.homepage.dataClass.CautionItemData
+import com.example.homepage.dataClass.ClockItemData
 import kotlinx.android.synthetic.main.caution_view_item.view.number
 import kotlinx.android.synthetic.main.caution_view_item.view.time
 import kotlinx.android.synthetic.main.recycler_view_item.view.voiceBroadcastContent
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.recycler_view_item.view.voiceBroadcastCont
  * @author: shelvehuang
  * @date: 2022/9/11
  */
-class CautionListAdapter(private val list: MutableList<CautionItemData>)  : RecyclerView.Adapter<CautionListAdapter.ViewHolder>() {
+class CautionListAdapter(private var list: MutableList<CautionItemData>)  : RecyclerView.Adapter<CautionListAdapter.ViewHolder>() {
 
     fun addItem(cautionItemData: CautionItemData) {
         list.add(0,cautionItemData)
@@ -23,6 +24,12 @@ class CautionListAdapter(private val list: MutableList<CautionItemData>)  : Recy
 
     fun removeItem(index: Int) {
         list.removeAt(index)
+    }
+
+    fun getList() = list
+
+    fun setList(list: MutableList<CautionItemData>) {
+        this.list = list
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

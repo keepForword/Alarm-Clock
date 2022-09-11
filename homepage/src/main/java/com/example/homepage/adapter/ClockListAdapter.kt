@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.recycler_view_item.view.workDay
  * @author: shelvehuang
  * @date: 2022/9/4
  */
-class ClockListAdapter(private val list: MutableList<ClockItemData>) : RecyclerView.Adapter<ClockListAdapter.ViewHolder>() {
+class ClockListAdapter(private var list: MutableList<ClockItemData>) : RecyclerView.Adapter<ClockListAdapter.ViewHolder>() {
 
     fun addItem(clockItemData: ClockItemData) {
         list.add(0, clockItemData)
@@ -25,6 +25,12 @@ class ClockListAdapter(private val list: MutableList<ClockItemData>) : RecyclerV
 
     fun removeItem(index: Int) {
         list.removeAt(index)
+    }
+
+    fun getList() = list
+
+    fun setList(list: MutableList<ClockItemData>) {
+        this.list = list
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -54,4 +60,6 @@ class ClockListAdapter(private val list: MutableList<ClockItemData>) : RecyclerV
     }
 
     override fun getItemCount() = list.size
+
+
 }
