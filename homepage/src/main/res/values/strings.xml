@@ -2,4 +2,8 @@
     <string name="app_name">HomePage</string>
     <string name="caution_button_text">提醒</string>
     <string name="clock_button_text">时钟</string>
+    <string name="repetition">重复</string>
+    <string name="voiceBroadcast">语音播报内容</string>
+    <string name="repetitionSelect">每天</string>
+    <string name="DefaultVoiceBroadcastContent">起床啦！起床啦！</string>
 </resources>

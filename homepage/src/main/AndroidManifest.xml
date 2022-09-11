@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AlarmClock">
         <activity
+                android:name=".EditActivity"
+                android:exported="false" />
+        <activity
                 android:name=".activity.HomePageActivity"
                 android:exported="true">
             <intent-filter>
